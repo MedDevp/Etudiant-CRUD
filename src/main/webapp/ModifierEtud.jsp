@@ -6,7 +6,6 @@
     <title>Modifier une personne</title>
     <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/css/modifier.css">
     <style>
-        /* Ajout de styles pour la barre latérale */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -32,7 +31,7 @@
             background-color: #555;
         }
         .container {
-            margin-left: 250px; /* Ajuste la marge gauche pour laisser de l'espace à la barre latérale */
+            margin-left: 250px;
             padding: 20px;
         }
         h2 {
@@ -51,10 +50,10 @@
             width: 100%;
             padding: 8px;
             margin-bottom: 10px;
-            box-sizing: border-box; /* Pour inclure le padding dans la largeur */
+            box-sizing: border-box; 
         }
         button[type="submit"] {
-            background-color: #4CAF50; /* Couleur verte */
+            background-color: #4CAF50; 
             color: white;
             padding: 10px 20px;
             border: none;
@@ -62,7 +61,7 @@
             border-radius: 5px;
         }
         button[type="submit"]:hover {
-            background-color: #45a049; /* Légère variation de couleur au survol */
+            background-color: #45a049; 
         }
     </style>
 </head>
