@@ -7,14 +7,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestion des étudiants</title>
+    <title>Gestion des Ã©tudiants</title>
     <style>
     body {
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
     }
-        /* Styles pour la barre latérale */
+        /* Styles pour la barre latÃ©rale */
         .sidebar {
             height: 100%;
             width: 250px;
@@ -34,9 +34,8 @@
             background-color: #555;
         }
 
-        /* Styles pour la partie principale */
         .main {
-            margin-left: 250px; /* Ajuste la marge gauche pour laisser de l'espace à la barre latérale */
+            margin-left: 250px;
             padding: 20px;
         }
         h2 {
@@ -55,10 +54,10 @@
             width: 100%;
             padding: 8px;
             margin-bottom: 10px;
-            box-sizing: border-box; /* Pour inclure le padding dans la largeur */
+            box-sizing: border-box; 
         }
         button[type="submit"] {
-            background-color: #4CAF50; /* Couleur verte */
+            background-color: #4CAF50; 
             color: white;
             padding: 10px 20px;
             border: none;
@@ -66,7 +65,7 @@
             border-radius: 5px;
         }
         button[type="submit"]:hover {
-            background-color: #45a049; /* Légère variation de couleur au survol */
+            background-color: #45a049; 
         }
         .message {
         padding: 10px;
@@ -78,31 +77,30 @@
     }
 
     .success {
-        background-color: #dff0d8; /* Couleur verte pour les messages de succès */
+        background-color: #dff0d8;
         color: #3c763d;
     }
 
     .error {
-        background-color: #f2dede; /* Couleur rouge pour les messages d'erreur */
+        background-color: #f2dede;
         color: #a94442;
     }
     </style>
 </head>
 <body>
     <div class="sidebar">
-        <a href="AjouteEtud.jsp">Ajouter Étudiant</a>
-		<a href="RechercheEtud.jsp">Rechercher Étudiant</a>
-        <a href="ModifierEtud.jsp">Modifié les informations d'Étudiant</a>
+        <a href="AjouteEtud.jsp">Ajouter Ã‰tudiant</a>
+		<a href="RechercheEtud.jsp">Rechercher Ã‰tudiant</a>
+        <a href="ModifierEtud.jsp">ModifiÃ© les informations d'Ã‰tudiant</a>
     </div>
 
     <div class="main">
-        <!-- Formulaire pour ajouter un étudiant -->
-        <h2 id="ajouter-etudiant">Ajouter un étudiant</h2>
+        <h2 id="ajouter-etudiant">Ajouter un Ã©tudiant</h2>
         <form action="AjouteEtudServlet" method="post">
             <label for="nom">Nom :</label>
             <input type="text" id="nom" name="nom" required><br>
 
-            <label for="prenom">Prénom :</label>
+            <label for="prenom">PrÃ©nom :</label>
             <input type="text" id="prenom" name="prenom" required><br>
             
             <label for="date">Date de naissance :</label>
@@ -114,7 +112,7 @@
             <label for="address">Adresse :</label>
             <input type="text" id="address" name="address" required><br>
 
-            <label for="filiere">Filière :</label>
+            <label for="filiere">FiliÃ¨re :</label>
             <input type="text" id="filiere" name="filiere" required><br>
             
             <label for="email">E-mail :</label>
@@ -123,7 +121,6 @@
             <button type="submit">Ajouter</button>
         </form>
 
-		        <%-- Affichage du message de succès ou d'erreur --%>
 		<% if (request.getAttribute("successMessage") != null) { %>
 		    <div class="message success">
 		        <p><%= request.getAttribute("successMessage") %></p>
