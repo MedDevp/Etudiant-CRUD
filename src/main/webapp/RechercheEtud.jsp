@@ -5,7 +5,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Résultat de la recherche</title>
+    <title>RÃ©sultat de la recherche</title>
     <style>
     body {
         font-family: Arial, sans-serif;
@@ -54,7 +54,7 @@
             background-color: #555;
         }
         .container{
-        	margin-left: 250px; /* Ajuste la marge gauche pour laisser de l'espace à la barre latérale */
+        	margin-left: 250px; 
             padding: 20px;
             }
             th {
@@ -73,9 +73,9 @@
 </head>
 <body>
 	<div class="sidebar">
-	        <a href="AjouteEtud.jsp">Ajouter Étudiant</a>
-			<a href="RechercheEtud.jsp">Rechercher Étudiant</a>
-	        <a href="ModifierEtud.jsp">Modifié les informations d'Étudiant</a>
+	        <a href="AjouteEtud.jsp">Ajouter Ã‰tudiant</a>
+			<a href="RechercheEtud.jsp">Rechercher Ã‰tudiant</a>
+	        <a href="ModifierEtud.jsp">ModifiÃ© les informations d'Ã‰tudiant</a>
 	    </div>
     <div class="container"> 
         <h1 class="header">Recherche</h1>
@@ -88,15 +88,15 @@
 
 
             <hr>
-            <h2>Résultats de la recherche</h2>
+            <h2>RÃ©sultats de la recherche</h2>
             <table>
     <tr>                    
         <th>Nom</th>
-        <th>Prénom</th>
+        <th>PrÃ©nom</th>
         <th>Date de Naissance</th>
         <th>CIN</th>
         <th>Adresse</th>
-        <th>Filière</th>
+        <th>FiliÃ¨re</th>
         <th>Email</th>
         <th>Action</th>
     </tr>
@@ -113,20 +113,20 @@
                 <td><%= rs.getString("email") %></td>
                 <td>                   
 <a href="ModifierEtudServlet?id=<%= rs.getInt("id") %>" class="modifier">Modifier</a>
-					<a href="SupprimeEtudServlet?id=<%= rs.getInt(1) %>" class="supprimer" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet étudiant ?');">Supprimer</a>
+					<a href="SupprimeEtudServlet?id=<%= rs.getInt(1) %>" class="supprimer" onclick="return confirm('ÃŠtes-vous sÃ»r de vouloir supprimer cet Ã©tudiant ?');">Supprimer</a>
                 </td>
             </tr>
         <% } %>
     <% } else { %>
         <tr>
-            <td colspan="8">Aucun résultat trouvé avec ce CIN.</td>
+            <td colspan="8">Aucun rÃ©sultat trouvÃ© avec ce CIN.</td>
         </tr>
     <% } %>
     
     
 </table>
 	<% if (request.getAttribute("suppressionSuccess") != null) { %>
-                <p style="color: green;" class="message">L'étudiant a été supprimé avec succès.</p>
+                <p style="color: green;" class="message">L'Ã©tudiant a Ã©tÃ© supprimÃ© avec succÃ¨s.</p>
             <% } %>
 
         </div>
